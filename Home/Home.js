@@ -40,31 +40,32 @@ class Home extends Component {
 
   render() {
     if(this.state.user !== null) {
+
       return(
-        <Text style={styles.logo}> "Logged" </Text>
+        <Text style={styles.loggedIn}> {JSON.stringify(this.state.user)} </Text>
       )
     }
     else return(
-      <Text style={styles.logo}> "Hello" </Text>
+      <Text style={styles.notLoggedIn}> No User </Text>
     )
-
-    
   }
-
-
-
-
-
 
 }
 
 const styles = StyleSheet.create({
-  logo: {
-      marginLeft: 200,
+  notLoggedIn: {
+      marginLeft: 250,
       marginTop: 200,
       justifyContent: 'center',
       alignItems: 'center',
       fontSize: 78
+  },
+  loggedIn: {
+      marginLeft: 90,
+      marginTop: 200,
+      // justifyContent: 'center',
+      // alignItems: 'center',
+      fontSize: 20
   },
 });
 
